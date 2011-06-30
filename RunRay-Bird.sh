@@ -8,8 +8,10 @@
 #$ -M seb@boisvert.info
 #Email to be sent when the job starts and ends
 #$ -m beas
+
 module load compilers/gcc/4.4.2 mpi/openmpi/1.4.3_gcc
-/software/MPI/openmpi-1.4.3_gcc/bin/mpirun -tag-output /home/sboisver12/git-clones/ray/code/Ray \
+
+mpirun -np $NSLOTS -tag-output /home/sboisver12/git-clones/ray/code/Ray \
 -k 61 \
 -o parrot-Assemblathon2-k61-20110629-ray-db0f359 \
 -show-memory-usage \
@@ -440,6 +442,4 @@ module load compilers/gcc/4.4.2 mpi/openmpi/1.4.3_gcc
 -p \
   /rap/nne-790-ab/Datasets/Assemblathon-2-Bird/illumina_uk_qseq/s_8_1_2208_qseq.txt.fastq \
   /rap/nne-790-ab/Datasets/Assemblathon-2-Bird/illumina_uk_qseq/s_8_2_2208_qseq.txt.fastq 
-
-wait
 

@@ -8,8 +8,10 @@
 #$ -M seb@boisvert.info
 #Email to be sent when the job starts and ends
 #$ -m beas
+
 module load compilers/gcc/4.4.2 mpi/openmpi/1.4.3_gcc
-/software/MPI/openmpi-1.4.3_gcc/bin/mpirun -tag-output /home/sboisver12/git-clones/ray/code/Ray \
+
+mpirun -np $NSLOTS -tag-output /home/sboisver12/git-clones/ray/code/Ray \
 -k 63 \
 -o snake-Assemblathon2-k63-20110628-ray-cbd3b3dc \
 -show-memory-usage \
@@ -38,4 +40,3 @@ module load compilers/gcc/4.4.2 mpi/openmpi/1.4.3_gcc
 -i /rap/nne-790-ab/Datasets/Assemblathon-2-Snake/110405_EAS192_0222_FC70N35AAXX_lane7.fastq \
 -i /rap/nne-790-ab/Datasets/Assemblathon-2-Snake/110405_EAS192_0222_FC70N35AAXX_lane8.fastq 
 
-wait
