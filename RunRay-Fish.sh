@@ -1,21 +1,20 @@
 ##!/bin/bash
-#$ -N fish-Assemblathon2-k63-20110630-ray-db0f359-show-malloc
+#$ -N fish-Assemblathon2-k41-20110808
 #$ -P nne-790-ab
 #$ -l h_rt=24:00:00
-#$ -pe default 512
+#$ -pe default 344
 #$ -R y
 #Set email address for notification
-#$ -M seb@boisvert.info
+#$ -M sebastien.boisvert.3@ulaval.ca
 #Email to be sent when the job starts and ends
 #$ -m beas
 
 module load compilers/gcc/4.4.2 mpi/openmpi/1.4.3_gcc
 
-mpirun -np $NSLOTS -tag-output /home/sboisver12/git-clones/ray/code/Ray \
--k 63 \
--o snake-Assemblathon2-k63-20110630-ray-db0f359-show-malloc \
--show-memory-usage \
--show-memory-allocations \
+mpirun -np $NSLOTS -tag-output /home/sboisver12/Ray64-build/Ray \
+-k 41 \
+-o fish-Assemblathon2-k41-20110808 \
+-show-memory-usage -show-ending-context \
 -p \
    /rap/nne-790-ab/Datasets/Assemblathon-2-Fish/625E1AAXX.1.1.fastq \
    /rap/nne-790-ab/Datasets/Assemblathon-2-Fish/625E1AAXX.1.2.fastq \

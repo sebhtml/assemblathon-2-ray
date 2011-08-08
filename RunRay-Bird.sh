@@ -1,11 +1,11 @@
 ##!/bin/bash
-#$ -N parrot-Assemblathon2-k61-20110629-ray-db0f359
+#$ -N parrot-Assemblathon2-k61-20110707-ray-v1.6.1-rc2
 #$ -P nne-790-ab
 #$ -l h_rt=24:00:00
 #$ -pe default 512
 #$ -R y
 #Set email address for notification
-#$ -M seb@boisvert.info
+#$ -M sebastien.boisvert.3@ulaval.ca
 #Email to be sent when the job starts and ends
 #$ -m beas
 
@@ -13,7 +13,7 @@ module load compilers/gcc/4.4.2 mpi/openmpi/1.4.3_gcc
 
 mpirun -np $NSLOTS -tag-output /home/sboisver12/git-clones/ray/code/Ray \
 -k 61 \
--o parrot-Assemblathon2-k61-20110629-ray-db0f359 \
+-o parrot-Assemblathon2-k61-20110707-ray-v1.6.1-rc2 \
 -show-memory-usage \
 `: Roche 454 Flexplus shotgun single reads` \
 -s /rap/nne-790-ab/Datasets/Assemblathon-2-Bird/454_flexplus_shotgun/budgie_mrb_roche_flexplus_G0CHDZA01.sff \
@@ -153,7 +153,7 @@ mpirun -np $NSLOTS -tag-output /home/sboisver12/git-clones/ray/code/Ray \
 -p \
    /rap/nne-790-ab/Datasets/Assemblathon-2-Bird/BGI_illumina_data/PARprgDABDVAAPEI-6/110531_I277_FCB06B9ABXX_L7_PARprgDABDVAAPEI-6_1.fq.fastq \
    /rap/nne-790-ab/Datasets/Assemblathon-2-Bird/BGI_illumina_data/PARprgDABDVAAPEI-6/110531_I277_FCB06B9ABXX_L7_PARprgDABDVAAPEI-6_2.fq.fastq \
-`: Illumina sequences from Illumina UK, insert size: 400-600` \
+`: library budgieILL Illumina sequences from Illumina UK, insert size: 400-600` \
 -p \
   /rap/nne-790-ab/Datasets/Assemblathon-2-Bird/illumina_uk_qseq/s_6_1_1101_qseq.txt.fastq \
   /rap/nne-790-ab/Datasets/Assemblathon-2-Bird/illumina_uk_qseq/s_6_2_1101_qseq.txt.fastq \
