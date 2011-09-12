@@ -1,20 +1,22 @@
 ##!/bin/bash
-#$ -N fish-Assemblathon2-k41-20110808
+#$ -N fish-Assemblathon2-k31-20110912-1
+
+jobName=fish-Assemblathon2-k31-20110912-1
+
 #$ -P nne-790-ab
-#$ -l h_rt=24:00:00
-#$ -pe default 344
+#$ -l h_rt=48:00:00
+#$ -pe default 256
 #$ -R y
-#Set email address for notification
-#$ -M sebastien.boisvert.3@ulaval.ca
-#Email to be sent when the job starts and ends
-#$ -m beas
+#$ -cwd
 
 module load compilers/gcc/4.4.2 mpi/openmpi/1.4.3_gcc
 
-mpirun -np $NSLOTS -tag-output /home/sboisver12/Ray64-build/Ray \
--k 41 \
--o fish-Assemblathon2-k41-20110808 \
--show-memory-usage -show-ending-context \
+mpiexec -n $NSLOTS -output-filename $jobName \
+/home/sboisver12/Ray \
+-k 31 \
+-o $jobName \
+-show-memory-usage -show-extension-choice \
+-read-write-checkpoints \
 -p \
    /rap/nne-790-ab/Datasets/Assemblathon-2-Fish/625E1AAXX.1.1.fastq \
    /rap/nne-790-ab/Datasets/Assemblathon-2-Fish/625E1AAXX.1.2.fastq \
