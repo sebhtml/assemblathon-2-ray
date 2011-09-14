@@ -1,7 +1,7 @@
 ##!/bin/bash
-#$ -N fish-Assemblathon2-k31-20110912-1
+#$ -N fish-Assemblathon2-k31-20110913-1
 
-jobName=fish-Assemblathon2-k31-20110912-1
+jobName=fish-Assemblathon2-k31-20110913-1
 
 #$ -P nne-790-ab
 #$ -l h_rt=48:00:00

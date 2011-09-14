@@ -1,7 +1,7 @@
 ##!/bin/bash
-#$ -N k31-Ray-Bird-20110912-1
+#$ -N k31-Ray-Bird-20110914-1
 
-jobName=k31-Ray-Bird-20110912-1
+jobName=k31-Ray-Bird-20110914-1
 
 #$ -P nne-790-ab
 #$ -l h_rt=48:00:00

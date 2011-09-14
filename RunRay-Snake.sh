@@ -41,7 +41,7 @@ mpiexec -n $NSLOTS -output-filename $jobName \
 -i /rap/nne-790-ab/Datasets/Assemblathon-2-Snake/110405_EAS192_0222_FC70N35AAXX_lane3.fastq \
 -i /rap/nne-790-ab/Datasets/Assemblathon-2-Snake/110405_EAS192_0222_FC70N35AAXX_lane4.fastq 10000 1000 \
 -i /rap/nne-790-ab/Datasets/Assemblathon-2-Snake/110405_EAS192_0222_FC70N35AAXX_lane5.fastq 10000 1000 \
--i /rap/nne-790-ab/Datasets/Assemblathon-2-Snake/110405_EAS192_0222_FC70N35AAXX_lane6.fastq 10000 1000\
+-i /rap/nne-790-ab/Datasets/Assemblathon-2-Snake/110405_EAS192_0222_FC70N35AAXX_lane6.fastq 10000 1000 \
 -i /rap/nne-790-ab/Datasets/Assemblathon-2-Snake/110405_EAS192_0222_FC70N35AAXX_lane7.fastq \
 -i /rap/nne-790-ab/Datasets/Assemblathon-2-Snake/110405_EAS192_0222_FC70N35AAXX_lane8.fastq 
 
