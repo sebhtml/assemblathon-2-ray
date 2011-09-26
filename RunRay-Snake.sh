@@ -1,7 +1,7 @@
 #!/bin/bash
-#$ -N snake-Assemblathon2-k31-20110912-1
+#$ -N snake-Assemblathon2-k31-20110920-1
 
-jobName=snake-Assemblathon2-k31-20110912-1
+jobName=snake-Assemblathon2-k31-20110920-1
 
 #$ -P nne-790-ab
 #$ -l h_rt=48:00:00
@@ -10,8 +10,9 @@ jobName=snake-Assemblathon2-k31-20110912-1
 #$ -cwd
 
 module load compilers/gcc/4.4.2 mpi/openmpi/1.4.3_gcc
+#module load compilers/intel/11.1.059 mpi/openmpi/1.4.3_intel
 
-mpiexec -n $NSLOTS -output-filename $jobName \
+mpiexec -n 256 -output-filename $jobName \
 /home/sboisver12/Ray \
 -k 31 \
 -o $jobName \
