@@ -1,13 +1,13 @@
 #!/bin/bash
 # the name of the job
-#PBS -N Ray-bird-20110913-1-guillimin
+#PBS -N Ray-bird-20110920-1-guillimin
 # 64 nodes, 8 cores per node, 512 cores
 #PBS -l nodes=64:ppn=8
 # queue name high-bandwidth
 #PBS -q hb
 #PBS -l walltime=48:00:00
 
-jobName=Ray-bird-20110913-1-guillimin
+jobName=Ray-bird-20110920-1-guillimin
 
 module load mvapich2/1.6-gcc
 
